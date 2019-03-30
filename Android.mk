@@ -6,7 +6,7 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE := OSMAnd
 
-# LOCAL_CERTIFICATE := < desired key >
+LOCAL_CERTIFICATE := platform
 
 # Use OSMAND_APK_PATH if set. Need to export OSMAND_APK_PATH
 ifdef OSMAND_APK_PATH
