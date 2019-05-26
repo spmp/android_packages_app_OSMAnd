@@ -9,7 +9,7 @@ LOCAL_MODULE := OSMAnd
 
 LOCAL_CERTIFICATE := platform
 
-LOCAL_SRC_FILES := outputs/apk/fullLegacyFat/debug/OsmAnd-full-legacy-fat-debug.apk
+LOCAL_SRC_FILES := android/OsmAnd/build/outputs/apk/fullLegacyFat/debug/OsmAnd-full-legacy-fat-debug.apk
 
 LOCAL_MODULE_CLASS := APPS
 LOCAL_OVERRIDES_PACKAGES := Maps
