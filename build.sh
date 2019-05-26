@@ -4,7 +4,7 @@ cd "${DIR}/android/OsmAnd"
 
 OSM_LOG_FILE="${OSM_LOG_FILE:-/tmp/build_osmand.log}"
 
-../gradlew  --refresh-dependencies assembleFullLegacyFatDebug 2>&1 > "${OSM_LOG_FILE}"
+../gradlew  --refresh-dependencies clean assembleFullLegacyFatDebug 2>&1 > "${OSM_LOG_FILE}"
 
 if [[ $? -eq 0 ]]
 then
