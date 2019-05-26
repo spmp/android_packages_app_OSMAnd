@@ -4,16 +4,16 @@ cd "${DIR}/android/OsmAnd"
 
 OSM_LOG_FILE="${OSM_LOG_FILE:-/tmp/build_osmand.log}"
 
-./gradlew --stop
-../gradlew  --refresh-dependencies clean assembleFullLegacyFatDebug &> "${OSM_LOG_FILE}"
+../gradlew --stop
+../gradlew --no-daemon --refresh-dependencies clean assembleFullLegacyFatDebug &> "${OSM_LOG_FILE}"
 
 if [[ $? -eq 0 ]]
 then
+        ../gradlew --stop
         echo "BUILD SUCCESSFUL!"
-        ./gradlew --stop
         exit 0
 else
+        ../gradlew --stop
         echo "FAIL"
-        ./gradlew --stop
         exit 1
 fi
